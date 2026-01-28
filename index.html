@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photobooth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📸 Photo Booth</h1>
+
+  <div class="controls">
+    <button id="switchCam">🔁 Switch</button>
+    <button id="countdown">3s Countdown</button>
+    <select id="filter">
+      <option value="none">Filter: None</option>
+      <option value="bw">Black & White</option>
+      <option value="pink">Pink</option>
+      <option value="vhs">VHS</option>
+    </select>
+  </div>
+
+<select id="frameSelect">
+    <option value="none">Frame: None</option>
+    <option value="classic">Classic</option>
+    <option value="polaroid">Polaroid</option>
+    <option value="neon">Neon</option>
+    <option value="cute">Cute</option>
+  </select>
+</div>
+
+  <div class="frame">
+    <video id="camera" autoplay playsinline></video>
+    <div class="frameOverlay"></div>
+  </div>
+
+  <div class="buttons">
+    <button id="snap">Take Photo</button>
+    <button id="download" disabled>Download</button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <img id="photo" />
+
+  <div id="strip"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
